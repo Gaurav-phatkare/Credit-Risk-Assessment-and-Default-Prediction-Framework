@@ -1,0 +1,40 @@
+{
+  "champion_model": "xgb_final",
+  "train_period": "2007\u20132016",
+  "oot_period": "2017\u20132018",
+  "n_train": 1119699,
+  "n_oot": 225611,
+  "features": 48,
+  "performance": {
+    "auc_oot": 0.7216,
+    "gini_oot": 0.4433,
+    "ks_oot": 0.3216,
+    "auc_train": 0.7434,
+    "auc_drop": 0.0218
+  },
+  "calibration": {
+    "method": "Platt Scaling",
+    "mean_pd_before": 0.4565,
+    "mean_pd_after": 0.2174,
+    "actual_bad_rate": 0.2128
+  },
+  "psi": 0.027,
+  "lgd_assumption": 0.6,
+  "cutoff_recommendation": {
+    "conservative": {
+      "accept_rate": "50%",
+      "pd_threshold": 0.1837,
+      "bad_rate": "10.64%"
+    },
+    "balanced": {
+      "accept_rate": "65%",
+      "pd_threshold": 0.254,
+      "bad_rate": "13.25%"
+    },
+    "growth": {
+      "accept_rate": "75%",
+      "pd_threshold": 0.312,
+      "bad_rate": "15.12%"
+    }
+  }
+}
